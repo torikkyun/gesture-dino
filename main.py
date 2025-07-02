@@ -96,15 +96,10 @@ class DinoHandController_Peace:
                 continue
 
             frame_count += 1
-
             frame = cv2.flip(frame, 1)
-
             hands, img = self.detector.findHands(frame, draw=True)
-
             status, color = self.process_hand_gesture(hands)
-
             self.draw_simple_ui(img, status, color, frame_count)
-
             cv2.imshow("Dino Control - PEACE", img)
 
             if cv2.waitKey(1) & 0xFF == ord("q"):
