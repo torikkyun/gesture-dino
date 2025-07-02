@@ -11,7 +11,7 @@ class DinoHandController_Peace:
 
         self.is_jumping = False
         self.last_action_time = 0
-        self.action_cooldown = 0.12
+        self.action_cooldown = 0.1
 
         print("Initializing camera...")
         self.video = cv2.VideoCapture(0, cv2.CAP_DSHOW)
